@@ -61,7 +61,7 @@ function editComment(id, text) {
     }
 }
 
-function thumbUpComment(id) {
+function thumbUpComment(id, thumbState) {
 	return {
 		type: THUMB_UP_COMMENT,
         id,
@@ -69,7 +69,7 @@ function thumbUpComment(id) {
     }
 }
 
-function thumbDownComment(id) {
+function thumbDownComment(id, thumbState) {
 	return {
 		type: THUMB_DOWN_COMMENT,
         id,
@@ -80,5 +80,5 @@ function thumbDownComment(id) {
 dispatch(addComment('nowy komentarz!'));
 dispatch(remComment(3));
 dispatch(editComment(5, 'zmień komentarz!'));
-dispatch(thumbUpCommentt(8));
-dispatch(thumbDownComment(8));
+dispatch(thumbUpCommentt(8, 4));
+dispatch(thumbDownComment(8, -2));
